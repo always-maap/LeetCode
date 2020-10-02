@@ -20,7 +20,7 @@ Output: [0,1]
 """
 
 
-# solution 1
+# O(n^2) space | O(n) time
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         answers = []
