@@ -13,12 +13,13 @@ Output: "255[.]100[.]50[.]0"
 """
 
 
+# O(n) time | O(n) space
 class Solution:
     def defangIPaddr(self, address: str) -> str:
         str = ""
         for i in address:
             if i == ".":
-               str += "[.]"
+                str += "[.]"
             else:
                 str += i
         return str

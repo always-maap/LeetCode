@@ -24,6 +24,7 @@ Output: [true,false,true]
  """
 
 
+# O(n) time | O(n) space
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         maxNum = max(candies)

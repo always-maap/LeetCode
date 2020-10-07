@@ -18,6 +18,7 @@ Output: [1,2,1,2]
 """
 
 
+# O() time | O() space
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         answers = []

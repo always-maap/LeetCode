@@ -20,6 +20,7 @@ Output: 0
 """
 
 
+# O(2^n) time | O(1) space
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         count = 0

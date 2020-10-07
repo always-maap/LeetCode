@@ -31,6 +31,7 @@ Output: "rat"
 """
 
 
+# O(n) time | O(n) space
 class Solution:
     def restoreString(self, s: str, indices: List[int]) -> str:
         res = list(s)

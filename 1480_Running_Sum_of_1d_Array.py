@@ -19,6 +19,7 @@ Output: [3,4,6,16,17]
  """
 
 
+# O(n) time | O(n) space
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         answers = []

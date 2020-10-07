@@ -20,6 +20,7 @@ The characters in J are distinct.
 """
 
 
+# O(n + m) time | O(n) space
 class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
         jewels = {}
