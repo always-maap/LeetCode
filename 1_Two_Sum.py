@@ -30,3 +30,16 @@ class Solution:
                 if firstNum + secondNum == target:
                     return [i, j]
         return []
+
+
+# O(n) time | O(n) space
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        memoNums = {}
+        for i in range(len(nums)):
+            potentailMatch = target - nums[i]
+            if potentailMatch in memoNums:
+                return [i, memoNums[potentailMatch]]
+            else:
+                memoNums[nums[i]] = i
+        return []
