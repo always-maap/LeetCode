@@ -21,7 +21,7 @@ Explanation: 2 does not exist in nums so return -1
 import math
 
 
-# O(n log n) time | O(1) space
+# O(log n) time | O(log n) space
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         start = 0
