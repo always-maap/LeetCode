@@ -31,6 +31,12 @@ Output: 0
 """
 
 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
 # O(n) time | O(1) space
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
@@ -41,6 +47,6 @@ class Solution:
         counter = 0
         result = 0
         while len(stack):
-            result += stack.pop()*2**counter
+            result += stack.pop() * 2 ** counter
             counter += 1
         return result

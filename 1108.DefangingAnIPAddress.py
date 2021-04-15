@@ -16,10 +16,10 @@ Output: "255[.]100[.]50[.]0"
 # O(n) time | O(n) space
 class Solution:
     def defangIPaddr(self, address: str) -> str:
-        str = ""
+        res = ""
         for i in address:
             if i == ".":
-                str += "[.]"
+                res += "[.]"
             else:
-                str += i
-        return str
+                res += i
+        return res

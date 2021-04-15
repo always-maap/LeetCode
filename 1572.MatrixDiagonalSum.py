@@ -27,15 +27,18 @@ Input: mat = [[5]]
 Output: 5
 """
 
+from typing import List
 
+
+# O(n) time | O(1) space
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
         length = len(mat)
         sum = 0
         for i in range(length):
             sum += mat[i][i]
-            sum += mat[i][length-i-1]
+            sum += mat[i][length - i - 1]
         if length % 2:
             print(i)
-            sum -= mat[i//2][i//2]
+            sum -= mat[i // 2][i // 2]
         return sum

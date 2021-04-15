@@ -19,6 +19,8 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 """
 
+from typing import List
+
 
 # O(n^2) time | O(1) space
 class Solution:

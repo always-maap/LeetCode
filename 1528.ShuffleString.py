@@ -30,6 +30,8 @@ Input: s = "art", indices = [1,0,2]
 Output: "rat"
 """
 
+from typing import List
+
 
 # O(n) time | O(n) space
 class Solution:

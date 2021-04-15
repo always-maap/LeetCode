@@ -19,13 +19,15 @@ Input: nums = [1,2,3]
 Output: 0
 """
 
+from typing import List
+
 
 # O(2^n) time | O(1) space
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         count = 0
         for i, val in enumerate(nums):
-            for val2 in range(i+1, len(nums)):
+            for val2 in range(i + 1, len(nums)):
                 if val == nums[val2]:
                     count += 1
         return count

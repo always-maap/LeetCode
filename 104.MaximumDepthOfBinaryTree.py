@@ -31,10 +31,14 @@ Output: 1
 #         self.right = right
 
 
+from idlelib.tree import TreeNode
+
+
 # O(n) time | O(1)
 class Solution:
     currMaxDepth = 0
-    def maxDepth(self, root: TreeNode, currDepth = 0) -> int:
+
+    def maxDepth(self, root: TreeNode, currDepth=0) -> int:
         if not root: return 0
         currDepth += 1
         if not root.left and not root.right:

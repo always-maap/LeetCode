@@ -37,15 +37,15 @@ class Solution:
         elif N == 1:
             return 1
         else:
-            return self.fib(N-1) + self.fib(N-2)
+            return self.fib(N - 1) + self.fib(N - 2)
 
 
 # O(n) space | O(n) time
 class Solution:
     def fib(self, N: int) -> int:
         memo = {0: 0, 1: 1}
-        for i in range(2, N+1):
-            memo[i] = memo[i-1] + memo[i-2]
+        for i in range(2, N + 1):
+            memo[i] = memo[i - 1] + memo[i - 2]
         return memo[N]
 
 

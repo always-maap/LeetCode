@@ -17,6 +17,8 @@ Input: nums = [1,1,2,2], n = 2
 Output: [1,2,1,2]
 """
 
+from typing import List
+
 
 # O() time | O() space
 class Solution:
@@ -24,7 +26,7 @@ class Solution:
         answers = []
         newArr = []
         for i, val in enumerate(nums):
-            if i >= len(nums)/2:
+            if i >= len(nums) / 2:
                 newArr.append(val)
         for i in range(len(newArr)):
             answers.append(nums[i])

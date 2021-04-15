@@ -37,6 +37,8 @@ Input: nums = [1], index = [0]
 Output: [1]
 """
 
+from typing import List
+
 
 # O(n^2) time | O(n) space
 class Solution:
