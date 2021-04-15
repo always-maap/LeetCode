@@ -20,7 +20,10 @@ Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 """
 
+from typing import List
 
+
+# O(n) time | O(1) space
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         minPrice = 999999

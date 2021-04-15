@@ -21,7 +21,7 @@ Output: true
 """
 
 
-# O(time) time | O(space) space
+# O(n) time | O(n) space
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         memo = {}
@@ -33,7 +33,7 @@ class Solution:
         return False
 
 
-# O(time) time | O(space) space
+# O(n) time | O(n) space
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         return len(nums) != len(set(nums))
