@@ -39,7 +39,6 @@ class Solution:
         for i in range(n):
             res.append(t)
             t *= nums[i]
-        print(res)
         t = 1
         for i in range(n - 1, -1, -1):
             res[i] *= t
