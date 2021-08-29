@@ -1,6 +1,7 @@
 """
 209. Minimum Size Subarray Sum
 Medium
+Array | Binary Search | Sliding Window | Prefix Sum
 ---
 Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous
  subarray [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to target.
@@ -36,12 +37,26 @@ from sys import maxsize
 # O(n ^ 2) time | O(1) space | Time limit Exceeded
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        r = maxsize
+        answer = maxsize
         for i in range(0, len(nums)):
             s = 0
             for j in range(i, len(nums)):
                 s += nums[j]
                 if s >= target:
-                    r = min(r, j - i + 1)
+                    answer = min(answer, j - i + 1)
                     break
-        return 0 if r == maxsize else r
+        return 0 if answer == maxsize else answer
+
+
+# O(n) time | O(1) space
+class Solution2:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        answer = maxsize
+        s = left = 0
+        for i in range(0, len(nums)):
+            s += nums[i]
+            while s >= target:
+                answer = min(answer, i + 1 - left)
+                s -= nums[left]
+                left += 1
+        return 0 if answer == maxsize else answer
