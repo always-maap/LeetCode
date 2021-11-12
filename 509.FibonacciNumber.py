@@ -40,7 +40,7 @@ class Solution:
             return self.fib(N - 1) + self.fib(N - 2)
 
 
-# O(n) space | O(n) time
+# O(n) time | O(n) space
 class Solution:
     def fib(self, N: int) -> int:
         memo = {0: 0, 1: 1}
@@ -49,7 +49,7 @@ class Solution:
         return memo[N]
 
 
-# O(n) space | O(1) time
+# O(n) time | O(1) space
 class Solution:
     def fib(self, N: int) -> int:
         lastTwo = [0, 1]
