@@ -35,7 +35,7 @@ class Solution:
 
 
 # O(n) time | O(n) space
-class Solution:
+class Solution2:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         memoNums = {}
         for i in range(len(nums)):
