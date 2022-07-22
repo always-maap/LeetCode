@@ -50,6 +50,7 @@ from collections import defaultdict
 from typing import List
 
 
+# O(n ^ 2) time | O(n) space
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         row_set = defaultdict(set)
