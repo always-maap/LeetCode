@@ -25,7 +25,7 @@ Constraints:
 from typing import List
 
 
-# O(n) time | O(n) space
+# O(n) time | O(1) space
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         k = len(nums) - k
