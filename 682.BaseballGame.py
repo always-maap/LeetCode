@@ -70,7 +70,6 @@ class Solution:
     def calPoints(self, operations: List[str]) -> int:
         stack = []
         for op in operations:
-            print(stack, op)
             if op == "+":
                 stack.append(stack[-1] + stack[-2])
             elif op == "D":
