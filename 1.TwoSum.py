@@ -41,9 +41,9 @@ class Solution2:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         memoNums = {}
         for i in range(len(nums)):
-            potentailMatch = target - nums[i]
-            if potentailMatch in memoNums:
-                return [i, memoNums[potentailMatch]]
+            potentialMatch = target - nums[i]
+            if potentialMatch in memoNums:
+                return [i, memoNums[potentialMatch]]
             else:
                 memoNums[nums[i]] = i
         return []

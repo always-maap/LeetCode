@@ -47,7 +47,7 @@ class Solution:
         return dict.values()
 
 
-# O(m log n) time | O(m) space
+# O(m n) time | O(m) space
 class Solution2:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         dict = collections.defaultdict(list)
