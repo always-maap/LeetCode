@@ -53,25 +53,24 @@ from typing import List
 # O(n ^ 2) time | O(n) space
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        row_set = defaultdict(set)
-        col_set = defaultdict(set)
-        sec_set = defaultdict(set)
+        row_dict = defaultdict(set)
+        col_dict = defaultdict(set)
+        sec_dict = defaultdict(set)
 
         for i in range(9):
             for j in range(9):
                 num = board[i][j]
 
-                if num == '.':
+                if num == ".":
                     continue
 
                 sec = (i // 3, j // 3)
 
-                if num in row_set[i] or num in col_set[j] or num in sec_set[sec]:
+                if num in row_dict[i] or num in col_dict[j] or num in sec_dict[sec]:
                     return False
                 else:
-                    row_set[i].add(num)
-                    col_set[j].add(num)
-                    sec_set[sec].add(num)
+                    row_dict[i].add(num)
+                    col_dict[j].add(num)
+                    sec_dict[sec].add(num)
 
-        print(row_set)
         return True
