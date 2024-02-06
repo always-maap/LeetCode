@@ -31,10 +31,14 @@ Constraints:
 
 from typing import List
 
+
 # O(n) time | O(1) space
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        greatest = -1
+        rightMax = -1
         for i in range(len(arr) - 1, -1, -1):
-            arr[i], greatest = greatest, max(greatest, arr[i])
+            newMax = max(rightMax, arr[i])
+            arr[i] = rightMax
+            rightMax = newMax
+
         return arr
